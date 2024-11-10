@@ -1,6 +1,7 @@
-package ProjetoFaculdade;
+package com.sistema.Classes;
 
-public class CadastroFuncionário {
+public class Funcionário {
+
     public String nome;
     public String senha;
     private String nomeCompleto;
@@ -11,36 +12,32 @@ public class CadastroFuncionário {
     private String bairro;
     private String estado;
     private String CEP;
-    private int telefone;
+    private String telefone;
     private String email;
     private String numerodeidentificacaoCPF;
     private String cargo;
     private String departamento;
     private String datadeAdmissão;
-    private String Salário;
+    private String salárioBruto;
     private String tipodecontrato;
     private String CargaHorária;
     private String supervisorResponsável;
     private String níveldeescolaridade;
     private String InstituiçãodeEnsino;
     private String Curso;
-    private int anodeConclusão;
+    private String anodeConclusão;
+    
+    public Funcionário() {
+
+    }
+
+
+
     public String getNomeCompleto() {
         return nomeCompleto;
     }
-    public CadastroFuncionário(String nomeCompleto, String dataDeNascimento, String genero, String rua,
-            String numeroCasa, String bairro, String estado, String CEP, int telefone, String email) {
-        this.nomeCompleto = nomeCompleto;
-        this.dataDeNascimento = dataDeNascimento;
-        this.genero = genero;
-        this.rua = rua;
-        this.numeroCasa = numeroCasa;
-        this.bairro = bairro;
-        this.estado = estado;
-        this.CEP = CEP;
-        this.telefone = telefone;
-        this.email = email;
-    }
+
+
 
     public boolean validarCPF(String cpf) {
         String regex = "^(?!000|111|222|333|444|555|666|777|888|999)\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$";
@@ -91,10 +88,10 @@ public class CadastroFuncionário {
     public void setCEP(String cEP) {
         CEP = cEP;
     }
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
     public String getEmail() {
@@ -128,10 +125,10 @@ public class CadastroFuncionário {
         this.datadeAdmissão = datadeAdmissão;
     }
     public String getSalário() {
-        return Salário;
+        return salárioBruto;
     }
     public void setSalário(String salário) {
-        Salário = salário;
+        salárioBruto = salário;
     }
     public String getTipodecontrato() {
         return tipodecontrato;
@@ -169,10 +166,10 @@ public class CadastroFuncionário {
     public void setCurso(String curso) {
         Curso = curso;
     }
-    public int getAnodeConclusão() {
+    public String getAnodeConclusão() {
         return anodeConclusão;
     }
-    public void setAnodeConclusão(int anodeConclusão) {
+    public void setAnodeConclusão(String anodeConclusão) {
         this.anodeConclusão = anodeConclusão;
     }
 }
